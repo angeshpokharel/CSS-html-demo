@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+	<TITLE>PUZZLE</TITLE>
+	<SCRIPT language="JavaScript">
+	function move(i)
+	{
+		i=eval(i);
+		var f=document.forms[0];
+		
+		if(i-4>=0 && f.b[i-4].style.visibility=="hidden")
+		{
+			moveButton(i, i-4);
+		}
+
+		if(i-1>=0 && (i%4)!=0 && f.b[i-1].style.visibility=="hidden")
+		{
+			moveButton(i, i-1);
+		}
+
+		if(i+1<=15 && (i%4)!=3 && f.b[i+1].style.visibility=="hidden")
+		{
+			moveButton(i, i+1);
+		}
+
+		if(i+4<=15 && f.b[i+4].style.visibility=="hidden")
+		{
+			moveButton(i, i+4);
+		}
+		
+		var j, k=0;
+		
+		for(j=0; j<=14; j++)
+		{
+			if(eval(f.b[j].value)==j+1)
+			{
+				k++;
+			}
+		}
+		
+		if(k==15)
+		{
+			alert("Congrats! you won");
+		}
+	}
+	
+	function moveButton(ind, moveInd)
+	{
+		var f=document.forms[0];
+		f.b[moveInd].style.visibility="visible";
+		f.b[moveInd].value=f.b[ind].value;
+		f.b[ind].value="";
+		f.b[ind].style.visibility="hidden";
+	}
+	</SCRIPT>
+</HEAD>
+<BODY>
+<FORM>
+<H4>Click on the buttons to move the buttons.</H4>
+<TABLE border=1 cellspacing=0 cellpadding=0>
+<TR>
+	<TD><INPUT type=button name=b value="15" style="width:40; height:40"  onClick="move(0);"></TD>
+	<TD><INPUT type=button name=b value="14" style="width:40; height:40" onClick="move(1);"></TD>
+	<TD><INPUT type=button name=b value="13" style="width:40; height:40" onClick="move(2);"></TD>
+	<TD><INPUT type=button name=b value="12" style="width:40; height:40" onClick="move(3);"></TD>
+</TR>
+<TR>
+	<TD><INPUT type=button name=b value="11" style="width:40; height:40" onClick="move(4);"></TD>
+	<TD><INPUT type=button name=b value="10" style="width:40; height:40" onClick="move(5);"></TD>
+	<TD><INPUT type=button name=b value="9" style="width:40; height:40" onClick="move(6);"></TD>
+	<TD><INPUT type=button name=b value="8" style="width:40; height:40" onClick="move(7);"></TD>
+</TR>
+<TR>
+	<TD><INPUT type=button name=b value="1" style="width:40; height:40" onClick="move(8);"></TD>
+	<TD><INPUT type=button name=b value="2" style="width:40; height:40" onClick="move(9);"></TD>
+	<TD><INPUT type=button name=b value="3" style="width:40; height:40" onClick="move(10);"></TD>
+	<TD><INPUT type=button name=b value="4" style="width:40; height:40" onClick="move(11);"></TD>
+</TR>
+<TR>
+	<TD><INPUT type=button name=b value="5" style="width:40; height:40" onClick="move(12);"></TD>
+	<TD><INPUT type=button name=b value="6" style="width:40; height:40" onClick="move(13);"></TD>
+	<TD><INPUT type=button name=b value="7" style="width:40; height:40" onClick="move(14);"></TD>
+	<TD><INPUT type=button name=b value="" style="width:40; height:40; visibility:hidden" onClick="move(15);"></TD>
+</TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

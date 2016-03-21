@@ -1,0 +1,114 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Window Object</title>
+<script language="javascript">
+opened=0/* this is flag character for window is open or not*/
+closed=0
+window.defaultStatus="Progarm Using Window Object"
+function one()
+{
+	var1=open("file1.html","FileOne","menubar=0,status=1,height=200,width=300")
+	opened=1
+	window.defaultStatus="File1 is not opened"
+	
+}
+function two()
+{
+	if(var1.closed)
+	{
+		alert("Windod is already closed")
+		window.status="file1.html is Closed"
+	}
+	else if(var1.opened)
+	{
+		window.defaultStatus="file1.html is already opened"
+	}
+	else 
+	{
+		var1.close()
+		window.status="file1.html is Closed"
+		falg=0
+	}
+}
+function three()
+{
+	if(!var1.closed)
+	{
+		alert("Child window can't be close")
+	}
+	else
+	{
+		if(confirm("Close Window"))
+		{
+			window.close()
+		}
+	}
+	
+}
+function four()
+{
+	if((!var1.closed) && (opened==1))
+	{
+		var1.document.bgColor="red"
+		var1.focus()
+	}
+	else
+	{
+		alert("file1.html Window is not open")	
+	}
+						   
+}
+function five()
+{
+	if((!var1.closed) && (opened==1))
+	{
+		var1.document.bgColor="blue"
+		var1.focus()
+	}
+	else
+	{
+		alert("File1.html is not open")	
+	}
+}
+function six()
+{
+	if((!var1.closed) && (opened==1))
+	{
+		var1.document.bgColor="green"
+		var1.focus()
+	}
+	else
+	{
+		alert("file1.html window not open")	
+	}
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" align="center">
+    <tr>
+      <td><label>
+        <input type="button" name="button" id="button" value="Open file1.html" onclick="one()" />
+      </label></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="button2" id="button2" value="Close file1.html" onclick="two()" /></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="button3" id="button3" value="Close This Window" onclick="three()" /></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="button" name="button4" id="button4" value="Red"  onclick="four()"/>
+        <input type="button" name="button5" id="button5" value="Blue" onclick="five()" />
+        <input type="button" name="button6" id="button6" value="Green" onclick="six()"/>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

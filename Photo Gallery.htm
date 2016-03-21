@@ -1,0 +1,110 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+<script>
+var index,a,b,c
+index=0;
+b=true
+a=new Array('Images/1.jpg','Images/2.jpg','Images/3.jpg','Images/4.jpg','Images/5.jpg','Images/6.jpg','Images/7.jpg','Images/8.jpg','Images/9.jpg','Images/10.jpg','Images/11.jpg','Images/12.jpg','Images/13.jpg','Images/14.jpg')
+c=new Array()
+c[0]="Machephuchhare view from Shiva Tample"
+c[1]="Kali-gandaki sub station in Lekhnath"
+c[2]="Lekhnath view from sub station"
+c[3]="Pokhara view from sub station"
+c[4]="A view of Pokhara from Shiva Tample"
+c[5]="Rakhe village view from Shiva Tample"
+c[6]="Kharane landscape view from temple"
+c[7]="Goat for dashain"
+c[8]="Machephuchhare view from dada"
+c[9]="Machephuchhare view from dada"
+c[10]="Rambo at Holi festival"
+c[11]="View of machephuchhare from fewa lake"
+c[12]="Aaanapurna view from shiva temple"
+c[13]="Way of my home from main road"
+function chan(one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen)
+{
+	document.getElementById('desc').innerText=one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen
+}
+function dim()
+{
+
+	chg.style.filter="alpha(opacity="+index+")"
+	//chg.style.opacity=addlight(index)
+	index+=3
+	if(index<=100)
+	{
+		setTimeout("dim()",15)
+	}
+	else
+	{
+		index=0
+	}
+}
+/*function test()
+{
+	setInterval('dim()',10)
+}*/
+
+</script>
+<style>
+#abc img
+{
+	width:80px;
+	height:52px;
+	margin:1px;
+	border:1px solid blue;
+	cursor:hand;
+	-cursor:hand;
+}
+#chg
+{
+	width:550px;
+	height:360px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div align="center">
+	<table border="1" width="534" cellspacing="0" bordercolor="#003399" cellpadding="10">
+		<tr>
+			<th colspan="3" id="abc" style="color: #006; font-size: 18px; font-family: arial;">A Perfect Photo Gallery</th>
+		</tr>
+		<tr>
+		  <td width="132" rowspan="2" id="abc">
+          <img src="Images/1.jpg" onClick="chg.src=a[0],dim(),chan(c[0])"> 
+          <img src="Images/2.jpg" onClick="chg.src=a[1],dim(),chan(c[1])"> 
+          <img src="Images/3.jpg" onClick="chg.src=a[2],dim(),chan(c[2])">
+          <img src="Images/4.jpg" onClick="chg.src=a[3],dim(),chan(c[3])">
+          <img src="Images/5.jpg" onClick="chg.src=a[4],dim(),chan(c[4])">
+          <img src="Images/6.JPG" onClick="chg.src=a[5],dim(),chan(c[5])">
+          <img src="Images/7.jpg" onClick="chg.src=a[6],dim(),chan(c[6])">
+          </td>
+		  <th style="color: #900; font-size: 14px; font-family: verdana; text-align: center;" id="desc">Machephuchhare view from Shiva Tample</th>
+		  <td width="264" rowspan="2"  id="abc">
+          <img src="Images/8.jpg" onClick="chg.src=a[7],dim(),chan(c[7])"> 
+          <img src="Images/9.jpg" onClick="chg.src=a[8],dim(),chan(c[8])"> 
+          <img src="Images/10.jpg" onClick="chg.src=a[9],dim(),chan(c[9])"> 
+          <img src="Images/11.jpg" onClick="chg.src=a[10],dim(),chan(c[10])"> 
+          <img src="Images/12.jpg" onClick="chg.src=a[11],dim(),chan(c[11])"> 
+          <img src="Images/13.jpg" onClick="chg.src=a[12],dim(),chan(c[12])">
+	      <img src="Images/14.jpg" onClick="chg.src=a[13],dim(),chan(c[13])">
+          </td>
+      </tr>
+		<tr>
+		  <td><img border="1" src="Images/1.jpg" id='chg'></td>
+	  </tr>
+		<tr>
+		  <td colspan="3" align="center" id="abc2"><span style="border-left: tempval; padding-bottom: 2px; padding-top: 2px; padding-left: 30px; padding-right: 30px; color: #039; font-size: 12px; font-family: arial;">copyright &copy; at <span style="font-size: 14px; text-decoration: underline; color: #003; font-weight: bold;">Angesh Pokharel</span> Handigaun,Kathmandu</span></td>
+	  </tr>
+	
+	</table>
+</div>
+
+</body>
+
+</html>

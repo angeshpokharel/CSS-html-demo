@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script language="javascript">
+function change()
+	{
+		ref=setInterval("cfunc()",2000)
+	}
+i=0;
+function cfunc()
+{	var photo=new Array("photos/1.jpg","photos/2.JPG","photos/3.jpg","photos/5.jpg");
+if(i>3)
+{i=0;}
+document.getElementById("pic").src=photo[i];
+i++;
+}
+</script>
+</head>
+
+<body onload="change()">
+<div id="wrap">
+	<div id="header">
+		<h1>Angesh's Website</h1>
+        <p>We Change Lives Globally &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <img src="image/ram.bmp" width="60" height="60" /></p>
+        <div id="header-links"> <form method="post" action="action.php"><pre>
+        		<strong>Member Login</strong><br />
+        User Name <input type="text" name="txtname" size="15" /><br />
+        Password  <input type="password" name="psw" size="15" />
+        </pre>
+        </form>
+        </div>
+
+	</div>
+    <div id="menu">
+    	<ul>
+        	<li id="current"><a href="index.html">Home</a></li>
+            <li><a href="calc.html">Calculator</a></li>
+			<li><a href="PUZZLE.html">PUZZLE Game</a></li>
+			<li><a href="window_object.html">Computer practical</a></li>
+			<li>
+			<li><a <li><a href="Photo Gallery.htm">Photos</a></li>		
+		</ul>
+			        </div>
+        <div id="content-wrap">
+        <div id="main">
+        
+        <h2><a href="inedex.html">Introduction</a></h2>
+        <p id="post-by">Posted by: <a href="ind.html">Angesh Pokharel</a></p>
+        <p>This website is made for you to  replace facebook. In this site you can see <strong>Tables, Forms, Pictures, Image gallaries </strong> and so many other things. This is to let you know what are you being able to do  after logging in.</p> 
+        <p>
+			After completion of  logging in  you will be able to have complete facility like that of facebook webpage. You can  have vedio talks between the friends of your own or any company also. </p>
+        <p class="post-footer float-left">
+        <a href="ind.html" class="read">Read more</a> |
+        <a href="ind.html" class="comments">Comments (7)</a> |
+        <span class="date">April 1, 2008</span></p>
+        <div>
+	<!--	<div class="clear"></div>-->
+		
+      <marquee behavior="alternate" scrollamount="5" scrolldelay="100" width="555px">
+     
+        <img class="pic" src="photos/1.jpg" />
+        <img class="pic" src="photos/2.JPG" />
+       <img class="pic" src="photos/3.jpg" />
+       <img class="pic" src="photos/5.jpg" />
+        </marquee>
+		</div>
+        </div>
+        <div id="slidebar"><img id="pic" src="photos/me.jpg" width="175" height="140" />
+        <h2>Important Links</h2>
+        <ul class="slidemenu">
+        <li><a href="http://www.ekantipur.com">News</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.smsbazzar.com">SMS & Jokes</a></li>
+        <li><a href="http://www.cybersansar.com">Model</a></li>
+        <li><a href="http://www.youtube.com">Music & Videos</a></li>
+        <li><a href="http://www.tensports.com">Sports</a></li>
+        <li><a href="http://www.google.com">Search Engine</a></li>
+        </ul>
+        </div>
+        </div>
+        <div id="footer">
+        <p>
+		&copy; 2010 <strong>Angesh 's page</strong> | 
+		Design by: Angesh| 
+		With Support of <a href="http://facebook.com/">Facebook Site Holder</a> | 
+		Valid :For student above grade8   		
+   	</p>
+        </div>
+     </div>
+
+<!--This page is  a registered page of Mr. Angesh.So don't try to hack  otherwise you fall down. -->
+</body>
+</html>

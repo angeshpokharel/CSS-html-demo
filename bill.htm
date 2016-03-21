@@ -1,0 +1,59 @@
+      <html>
+        <script language="javascript">
+
+function clr(nm,cl)
+{
+
+document.f1.elements[nm].style.color=cl
+}
+
+function cal()
+{
+   var a,b,c
+a=document.f1.t1.value
+b=document.f1.t2.value
+c=a*b
+document.f1.t3.value=c
+var d
+d=0
+
+if(c>=500 && c<=1000)
+   {
+   d=c*0.02
+}
+else if(c>1000 && c<=10000)
+  {
+    d=c*0.04
+}
+else if(c>10000)
+  {
+     d=c*0.05
+}
+else 
+     d=0
+document.f1.t5.value=c-d
+document.f1.t4.value=d
+}
+</script>
+<body>
+   <form name="f1">
+ <p><input type="text" name="q" value="Quantity" readonly onfocus="document.f1.t1.focus()">
+                   <input type="text" name="t1" value=0></p>
+
+<p><input type="text" name="r" value="Rate"  onfocus="document.f1.t2.focus()">
+                   <input type="text" name="t2" value=0></p>
+
+<p><input type="text" name="t" value="Total" onfocus="document.f1.t3.focus()">
+                   <input type="text" name="t3" value=0 readonly
+onmouseover="clr( 't3','red')" onmouseout="clr('t3','black')"></p>
+
+<p><input type="text" name="d" value="Discount" onfocus="document.f1.t4.focus()">
+                   <input type="text" name="t4" value=0 readonly></p>
+
+<p><input type="text" name="nt" value="Net Total" onfocus="document.f1.t5.focus()">
+                   <input type="text" name="t5" value=0 readonly></p>
+
+<p><input type="button" name="b1" value="calculate" onclick="cal()"></p>
+</body>
+</html>
+		

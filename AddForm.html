@@ -1,0 +1,58 @@
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript">
+//num1=Number(document.form1.num1.value)
+//num2=Number(document.form1.num2.value)
+function addi()
+{
+	num1=Number(form1.num1.value)
+	num2=Number(form1.num2.value)
+	sum=num1+num2
+	document.myform1.add.value=sum
+}
+
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="344" border="0" align="center">
+    <tr>
+      <td width="141">First Number</td>
+      <td width="154"><input type="text" name="num1" id="num1" /></td>
+    </tr>
+    <tr>
+      <td>Second Number</td>
+      <td><input type="text" name="num2" id="num2" /></td>
+    </tr>
+    <tr>
+      <td>Addition</td>
+      <td><input type="text" name="add" id="add" /></td>
+    </tr>
+    <tr>
+      <td>Subtraction</td>
+      <td><input type="text" name="dif" id="dif" /></td>
+    </tr>
+    <tr>
+      <td>Multiplication</td>
+      <td><input type="text" name="mul" id="mul" /></td>
+    </tr>
+    <tr>
+      <td>Division</td>
+      <td><input type="text" name="div" id="div" /></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><label>
+        <input type="button" name="button" id="button" value="+"  onclick="addi()"/>
+        <input type="button" name="button2" id="button2" value="-" />
+        <input type="button" name="button3" id="button3" value="*" />
+        <input type="button" name="button4" id="button4" value="/" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
